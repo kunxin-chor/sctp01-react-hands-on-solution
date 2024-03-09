@@ -1,5 +1,6 @@
 import React from 'react';
 import ColoredBox from './ColoredBox'
+import ColoredBoxEx from './ColoredBoxEx';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <ColoredBox/>
+      <ColoredBoxEx/>
     </div>
   );
 }

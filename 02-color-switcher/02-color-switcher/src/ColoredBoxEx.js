@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function ColoredBox() {
+function ColoredBoxEx() {
 
     const [color, setColor] = useState(1);
 
@@ -15,7 +15,11 @@ function ColoredBox() {
             return 'green';
         }
     }
+    
+    const handleButtonClick = (e) => {
+        setColor(parseInt(e.target.value));
 
+    }
     return <React.Fragment>
         <div style={{
             border:'1px black solid',
@@ -25,17 +29,11 @@ function ColoredBox() {
         }}>
         </div>
 
-        <button onClick={()=>{
-            setColor(1)
-        }}>Red</button>
-        <button onClick={()=>{
-            setColor(3)
-        }}>Green</button>
-        <button onClick={()=>{
-            setColor(2)
-        }}>Blue</button>
+        <button value="1" onClick={handleButtonClick}>Red</button>
+        <button value="3" onClick={handleButtonClick}>Green</button>
+        <button value="2" onClick={handleButtonClick}>Blue</button>
     </React.Fragment>
   
 }
 
-export default ColoredBox;
+export default ColoredBoxEx;
